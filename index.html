@@ -13,6 +13,25 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1466015285305195');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1466015285305195&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
@@ -2096,16 +2115,16 @@
                 ghiChu: note,
                 maDon: '#' + orderCode,
                 // ── FB Ads UTM ─────────────────────────────────
-                utm_source:      utm.utm_source,
-                utm_medium:      utm.utm_medium,
-                utm_campaign:    utm.utm_campaign,
+                utm_source: utm.utm_source,
+                utm_medium: utm.utm_medium,
+                utm_campaign: utm.utm_campaign,
                 utm_campaign_id: utm.utm_campaign_id,
-                utm_adset_id:    utm.utm_adset_id,
-                utm_ad_id:       utm.utm_ad_id,
-                utm_content:     utm.utm_content,
-                utm_term:        utm.utm_term,
-                fbclid:          utm.fbclid,
-                landing_url:     window.location.href
+                utm_adset_id: utm.utm_adset_id,
+                utm_ad_id: utm.utm_ad_id,
+                utm_content: utm.utm_content,
+                utm_term: utm.utm_term,
+                fbclid: utm.fbclid,
+                landing_url: window.location.href
                 // ───────────────────────────────────────────────
             };
 
